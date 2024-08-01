@@ -12,31 +12,28 @@ public class FindIndex {
         //            0, 1, 2, 3, 4, 5, 6, 7, 8
         int[] nums = {10, 40, 85, 60, 55, 100, 70,};
 
-        //array eke length eka aragena me variable ekata assigin karala thiyenawa
+
         int len = nums.length;
 
         if (len == 0) {
-            System.out.println(RED + "Array is empty ." + RESET);
-            //0 nam meka print wenawa 0 nemeine
-
+            System.out.println(RED + "Array is empty" + RESET);
         } else {
-            loop:
+          loop:
+
             do {
-                System.out.println("Enter Number : ");
+                System.out.println();
+                System.out.println("Enter number : ");
                 int search = scanner.nextInt();
-                //number eka aragena variable ekta asign karagannawa
                 for (int i = 0; i < len; i++) {
-                    //60 dunnoth 60 wenakan check karagena yanwa
-                    if (nums[i] == search) {
-                        //60 index eka 4 sout"Foud the index at 4
-                        System.out.println("Found index at :" + i);
-                        continue loop;
-                        //continue thibbe nethnm aye 55 , 100, 70 print wenawa
-                        // e tik acheck wenne nethuwa udata paninawa
-                    }
+                    //60 index eka 4
+                  if (nums[i] == search){
+                      System.out.println("Found index :" + i);
+                      continue loop;
+                  }
                 }
-                System.out.println(RED + "Not Foud number " + RESET);
-            } while (true);
+                System.out.println("Not Found  index" + RESET);
+            }while (true);
+
         }
     }
 }
